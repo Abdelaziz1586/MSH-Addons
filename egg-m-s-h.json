@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2025-06-29T21:09:34+03:00",
+    "exported_at": "2025-06-30T19:59:20+03:00",
     "name": "MSH",
     "author": "ceo@arioxa.cloud",
     "description": "MSHBedrock hibernation proxy for Minecraft Bedrock servers. Downloads and configures MSHBedrock with Nukkit automatically.",
@@ -23,7 +23,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\nmkdir -p \/mnt\/server\r\ncd \/mnt\/server\r\n\r\nif [ ! -f \"msh-config.properties\" ]; then\r\n    wget -O msh-config.properties https:\/\/github.com\/\/Abdelaziz1586\/\/MSH-Addons\/\/raw\/\/refs\/\/heads\/\/main\/\/msh-config.properties\r\nfi\r\n\r\nif [ ! -f \"nukkit.jar\" ]; then\r\n    wget -O nukkit.jar https:\/\/repo.opencollab.dev\/api\/maven\/latest\/file\/maven-snapshots\/cn\/nukkit\/nukkit\/1.0-SNAPSHOT?extension=jar\r\nfi",
+            "script": "#!\/bin\/bash\r\nmkdir -p \/mnt\/server\r\ncd \/mnt\/server\r\n\r\nif [ ! -f \"msh-config.properties\" ]; then\r\n    wget -O msh-config.properties https:\/\/github.com\/Abdelaziz1586\/MSH-Addons\/raw\/refs\/heads\/main\/msh-config.properties\r\nfi\r\n\r\nif [ ! -f \"nukkit.jar\" ]; then\r\n    wget -O nukkit.jar https:\/\/repo.opencollab.dev\/api\/maven\/latest\/file\/maven-snapshots\/cn\/nukkit\/nukkit\/1.0-SNAPSHOT?extension=jar\r\nfi",
             "container": "ghcr.io\/pterodactyl\/installers:alpine",
             "entrypoint": "ash"
         }
@@ -33,7 +33,7 @@
             "name": "Hidden",
             "description": "",
             "env_variable": "HIDDEN",
-            "default_value": "wget -O <YOUR_HOST_HERE>/MSHBedrock.jar",
+            "default_value": "wget -O <YOUR_HOST_HERE>\/MSHBedrock.jar",
             "user_viewable": false,
             "user_editable": false,
             "rules": "required|string|max:128",
